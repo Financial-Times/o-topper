@@ -92,6 +92,12 @@
 			"description": "Used where you only want content and a right-hand rail, no left-hand one"
 		},
 		{
+			"name": "Centered",
+			"title": "Centered Topper",
+			"template": "/demos/src/centered.mustache",
+			"description": "Used where you want a centered layout"
+		},
+		{
 			"name": "pa11y",
 			"title": "pa11y demo stub",
 			"template": "demos/src/pa11y.mustache",
