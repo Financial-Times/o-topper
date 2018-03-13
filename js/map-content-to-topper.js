@@ -147,7 +147,7 @@ const getTopperSettings = content => {
 	}
 };
 
-const getBackgroundType = (backgroundColour) => {
+const hasDarkBackground = (backgroundColour) => {
 	const darkBackgrounds = [
 		'black',
 		'slate',
@@ -169,5 +169,5 @@ module.exports = content => {
 			themeImageRatio: themeImageRatio[settings.layout]
 		},
 		settings,
-		{ hasDarkBackground: getBackgroundType(settings.backgroundColour) });
+		{ hasDarkBackground: hasDarkBackground(settings.backgroundColour) });
 };
