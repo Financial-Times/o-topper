@@ -65,7 +65,6 @@ describe('Topper content map', () => {
 	context('Dark background setting', () => {
 		it('returns true if the background is in the list of dark backgrounds', () => {
 			const topper = subject(articleContentFixture);
-			console.log(topper)
 			expect(topper.backgroundColour).to.equal('slate');
 			expect(topper.hasDarkBackground).to.equal(true);
 		});
