@@ -65,11 +65,10 @@
 }
 
 @mixin oTopperHeadshotSpacing {
-	$space-between-text-and-headshot: oTypographySpacingSize(2);
 
-	padding-right: calc(#{$_o-topper-headshot-width} + #{$space-between-text-and-headshot});
+	padding-right: calc(#{$_o-topper-headshot-width} + #{oTypographySpacingSize(2)});
 
 	@include oGridRespondTo(M) {
-		padding-right: calc(#{$_o-topper-headshot-width-M} + #{$space-between-text-and-headshot});
+		padding-right: calc(#{$_o-topper-headshot-width-M} + #{oTypographySpacingSize(2)});
 	}
 }
