@@ -1,6 +1,7 @@
+
 const { expect } = require('chai').use(require('dirty-chai'));
 
-import subject from '../js/map-content-to-topper';
+const subject = require('../js/map-content-to-topper').default;
 
 describe('Topper content map', () => {
 	const articleContentFixture = {
