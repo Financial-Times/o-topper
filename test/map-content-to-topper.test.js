@@ -46,7 +46,7 @@ describe('Topper content map', () => {
 				brandConcept: true
 			});
 			proclaim.notOk(topper.largeHeadline);
-			proclaim.deepStrictEqual(topper.modifiers['branded', 'has-headshot']);
+			proclaim.deepStrictEqual(topper.modifiers, ['branded', 'has-headshot']);
 		});
 
 		it('the editorially selected topper if it exists — overrides backgroundColour', () => {

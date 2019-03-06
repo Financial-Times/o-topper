@@ -174,7 +174,7 @@ const mapContentToTopper = content => {
 		},
 		settings,
 		{ hasDarkBackground: hasDarkBackground(settings.backgroundColour) });
-}
+};
 
 export default mapContentToTopper;
 export { mapContentToTopper };
