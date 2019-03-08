@@ -1,5 +1,5 @@
-import proclaim from 'proclaim';
-import subject from '../main';
+const proclaim = require('proclaim');
+const subject = require('../main');
 
 describe('Topper content map', () => {
 	const articleContentFixture = {
