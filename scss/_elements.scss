@@ -96,7 +96,6 @@
 }
 
 @mixin oTopperColumnist {
-	@include oTypographyMargin($top: 4);
 	margin-top: oSpacingByName('s4');
 	text-transform: uppercase;
 }
