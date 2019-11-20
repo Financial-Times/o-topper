@@ -1,6 +1,8 @@
-@mixin oTopperThemeElements {
-	.o-topper__opinion-genre {
-		@include oTopperOpinionGenre;
+@mixin oTopperThemeElements($themes) {
+	@if index($themes, 'opinion') {
+		.o-topper__opinion-genre {
+			@include oTopperOpinionGenre;
+		}
 	}
 
 	.o-topper__headshot {
@@ -16,150 +18,196 @@
 	}
 }
 
-@mixin oTopperThemes() {
-	@include oTopperThemeElements;
+@mixin oTopperThemes($themes) {
+	@include oTopperThemeElements($themes);
 
-	.o-topper--branded {
-		@include oTopperThemeBranded;
-		&.o-topper--right-rail {
-			@include oTopperGridRightRail;
+	@if index($themes, 'basic') {
+		.o-topper--basic {
+			@include oTopperBasic;
+			&.o-topper--right-rail {
+				@include oTopperGridRightRail;
+			}
 		}
 	}
 
-	.o-topper--opinion {
-		@include oTopperThemeOpinion;
-		&.o-topper--right-rail {
-			@include oTopperGridRightRail;
+	@if index($themes, 'branded') {
+		.o-topper--branded {
+			@include oTopperThemeBranded;
+			&.o-topper--right-rail {
+				@include oTopperGridRightRail;
+			}
 		}
 	}
 
-	.o-topper--has-headshot {
-		@include oTopperHasHeadshot;
-	}
-
-	.o-topper--full-bleed-offset {
-		@include oTopperThemeFullBleedOffset;
-		&.o-topper--right-rail {
-			@include oTopperFullBleedGridRightRail;
+	@if index($themes, 'opinion') {
+		.o-topper--opinion {
+			@include oTopperThemeOpinion;
+			&.o-topper--right-rail {
+				@include oTopperGridRightRail;
+			}
 		}
 	}
 
-	.o-topper--split-text-left,
-	.o-topper--split-text-center {
-		@include oTopperThemeSplitText;
+	@if index($themes, 'has-headshot') {
+		.o-topper--has-headshot {
+			@include oTopperHasHeadshot;
+		}
 	}
 
-	.o-topper--full-bleed-image-center,
-	.o-topper--full-bleed-image-left {
-		@include oTopperThemeFullBleedImage;
+	@if index($themes, 'full-bleed-offset') {
+		.o-topper--full-bleed-offset {
+			@include oTopperThemeFullBleedOffset;
+			&.o-topper--right-rail {
+				@include oTopperFullBleedGridRightRail;
+			}
+		}
 	}
 
-	.o-topper--package {
-		@include oTopperThemePackage;
+	@if index($themes, 'split-text-left') or index($themes, 'split-text-center') {
+		.o-topper--split-text-left,
+		.o-topper--split-text-center {
+			@include oTopperThemeSplitText;
+		}
 	}
 
-	.o-topper--package-extra,
-	.o-topper--package-extra-wide {
-		@include oTopperThemePackageExtra;
+	@if index($themes, 'full-bleed-image-center') or index($themes, 'full-bleed-image-left') {
+		.o-topper--full-bleed-image-center,
+		.o-topper--full-bleed-image-left {
+			@include oTopperThemeFullBleedImage;
+		}
 	}
 
-	.o-topper--package-special-report {
-		@include oTopperThemePackageSpecialReport;
+	@if index($themes, 'package') {
+		.o-topper--package {
+			@include oTopperThemePackage;
+		}
 	}
 
-	.o-topper--news-package {
-		@include oTopperThemeNewsPackage;
+	@if index($themes, 'package-extra') or index($themes, 'package-extra-wide') {
+		.o-topper--package-extra,
+		.o-topper--package-extra-wide {
+			@include oTopperThemePackageExtra;
+		}
 	}
 
-	.o-topper--centered {
-		@include oTopperThemeCentered;
+	@if index($themes, 'package-special-report') {
+		.o-topper--package-special-report {
+			@include oTopperThemePackageSpecialReport;
+		}
+	}
+
+	@if index($themes, 'news-package') {
+		.o-topper--news-package {
+			@include oTopperThemeNewsPackage;
+		}
+	}
+
+	@if index($themes, 'centered') {
+		.o-topper--centered {
+			@include oTopperCentered;
+		}
 	}
 }
 
-@mixin oTopperElements {
-	.o-topper {
-		@include oTopper;
-	}
-
-	.o-topper--centered {
-		@include oTopperCentered;
-	}
-
-	.o-topper__content {
-		@include oTopperContent;
-	}
-
-	.o-topper__visual {
-		@include oTopperVisual;
-	}
-
-	.o-topper__visual,
-	.o-topper__background {
-		@include oTopperBackground;
-	}
-
-	.o-topper--basic {
-		@include oTopperBasic;
-		&.o-topper--right-rail {
-			@include oTopperGridRightRail;
+@mixin oTopperElements($elements) {
+	@if index($elements, 'content') {
+		.o-topper__content {
+			@include oTopperContent;
 		}
 	}
 
-	.o-topper__headline {
-		@include oTopperHeadline;
+	@if index($elements, 'visual') {
+		.o-topper__visual {
+			@include oTopperVisual;
+		}
 	}
 
-	.o-topper__headline--large {
-		@include oTopperHeadlineLarge;
+	@if index($elements, 'visual') or index($elements, 'background') {
+		.o-topper__visual,
+		.o-topper__background {
+			@include oTopperBackground;
+		}
 	}
 
-	.o-topper__summary {
-		@include oTopperSummary;
+	@if index($elements, 'headline') {
+		.o-topper__headline {
+			@include oTopperHeadline;
+		}
+
+		.o-topper__headline--large {
+			@include oTopperHeadlineLarge;
+		}
 	}
 
-	.o-topper__standfirst {
-		@include oTopperStandfirst;
+	@if index($elements, 'summary') {
+		.o-topper__summary {
+			@include oTopperSummary;
+		}
 	}
 
-	.o-topper__summary--body {
-		@include oTopperSummaryBody;
+	@if index($elements, 'standfirst') {
+		.o-topper__standfirst {
+			@include oTopperStandfirst;
+		}
 	}
 
-	.o-topper__tags {
-		@include oTopperTags;
+	@if index($elements, 'summary--body') {
+		.o-topper__summary--body {
+			@include oTopperSummaryBody;
+		}
 	}
 
-	.o-topper__columnist {
-		@include oTopperColumnist;
+	@if index($elements, 'tags') {
+		.o-topper__tags {
+			@include oTopperTags;
+		}
 	}
 
-	.o-topper__columnist-name {
-		@include oTopperColumnistName;
+	@if index($elements, 'columnist') {
+		.o-topper__columnist {
+			@include oTopperColumnist;
+		}
 	}
 
-	.o-topper__brand {
-		@include oTopperBrand;
+	@if index($elements, 'columnist-name') {
+		.o-topper__columnist-name {
+			@include oTopperColumnistName;
+		}
 	}
 
-	.o-topper__topic {
-		@include oTopperTopic;
+	@if index($elements, 'brand') {
+		.o-topper__brand {
+			@include oTopperBrand;
+		}
 	}
 
-	.o-topper__read-next {
-		@include oTopperReadNext;
+	@if index($elements, 'topic') {
+		.o-topper__topic {
+			@include oTopperTopic;
+		}
 	}
 
-	.o-topper__image {
-		@include oTopperImage;
+	@if index($elements, 'read-next') {
+		.o-topper__read-next {
+			@include oTopperReadNext;
+		}
 	}
 
-	.o-topper__image-credit {
-		@include oTopperImageCredit;
+	@if index($elements, 'image') {
+		.o-topper__image {
+			@include oTopperImage;
+		}
+	}
+
+	@if index($elements, 'image-credit') {
+		.o-topper__image-credit {
+			@include oTopperImageCredit;
+		}
 	}
 }
 
-@mixin oTopperColors() {
-	@each $color in $_o-topper-colors {
+@mixin oTopperColors($colors) {
+	@each $color in $colors {
 		.o-topper--color-#{$color} {
 			@include oTopperColor($color);
 		}

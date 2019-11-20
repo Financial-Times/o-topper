@@ -6,15 +6,46 @@
 
 @import 'scss/variables';
 @import 'scss/mixins';
-
+@import 'scss/grid';
 @import 'scss/elements';
 @import 'scss/layout';
-@import 'scss/themes';
+
+@import 'scss/themes/branded';
+@import 'scss/themes/full-bleed-offset';
+@import 'scss/themes/split-text';
+@import 'scss/themes/full-bleed-image';
+@import 'scss/themes/package';
+@import 'scss/themes/news-package';
+@import 'scss/themes/right-rail';
+@import 'scss/themes/centered';
+
+@mixin oTopper($opts: (
+	'themes': $_o-topper-themes,
+	'elements': $_o-topper-elements
+	'colors': $_o-topper-colors
+), $include-base-styles: true) {
+
+	// Get topper themes to include.
+	$themes: map-get($opts, 'themes');
+	$themes: if($themes, $themes, ());
+	// Get topper elements to include.
+	$elements: map-get($opts, 'elements');
+	$elements: if($elements, $elements, ());
+
+	// Output base styles required by all themes.
+	@if $include-base-styles {
+		.o-topper {
+			@include oTopperBase;
+		}
+	}
+
+	// Output chosen elements, colours, and themes.
+	@include oTopperElements($elements);
+	@include oTopperColors($colors);
+	@include oTopperThemes($themes);
+}
 
 @if ($o-topper-is-silent == false) {
-	@include oTopperElements;
-	@include oTopperColors;
-	@include oTopperThemes;
-
+	@include oTopper();
 	$o-topper-is-silent: true !global;
 }

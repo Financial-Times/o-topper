@@ -4,6 +4,7 @@ $_o-topper-colors: 'white', 'black', 'claret', 'oxford', 'paper', 'slate', 'whea
 $_o-topper-themes: (
 	'branded',
 	'opinion',
+	'has-headshot',
 	'full-bleed-offset',
 	'split-text-left',
 	'split-text-center',
@@ -16,6 +17,25 @@ $_o-topper-themes: (
 	'news-package',
 	'right-rail',
 	'centered',
+);
+
+$_o-topper-elements: (
+	'content',
+	'visual',
+	'background',
+	'headline',
+	'headline--large',
+	'summary',
+	'standfirst',
+	'summary--body',
+	'tags',
+	'columnist',
+	'columnist-name',
+	'brand',
+	'topic',
+	'read-next',
+	'image',
+	'image-credit'
 );
 
 $_o-topper-defined: () !default;

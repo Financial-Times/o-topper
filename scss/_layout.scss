@@ -1,6 +1,4 @@
-@import 'grid';
-
-@mixin oTopper {
+@mixin oTopperBase {
 	//Basic topper uses the same grid columns as an article, so things can line up.
 	@include oTopperArticleGrid();
 	margin-bottom: oSpacingByIncrement(5);
