@@ -1,6 +1,24 @@
-/// @param {list} $_o-topper-colors - colors available to editorial in methode for the background
-$_o-topper-colors: 'white', 'black', 'claret', 'oxford', 'paper', 'slate', 'wheat', 'crimson', 'sky', 'velvet';
+/// @prop {Boolean}
+/// @access public
+$o-topper-is-silent: true !default;
 
+/// @prop {List} - colors available to editorial in methode for the background
+/// @access private
+$_o-topper-colors: (
+	'white',
+	'black',
+	'claret',
+	'oxford',
+	'paper',
+	'slate',
+	'wheat',
+	'crimson',
+	'sky',
+	'velvet'
+);
+
+/// @prop {List} - theme options
+/// @access private
 $_o-topper-themes: (
 	'branded',
 	'opinion',
@@ -19,6 +37,8 @@ $_o-topper-themes: (
 	'centered',
 );
 
+/// @prop {List} - element options
+/// @access private
 $_o-topper-elements: (
 	'content',
 	'visual',
@@ -38,10 +58,11 @@ $_o-topper-elements: (
 	'image-credit'
 );
 
+/// @access private
 $_o-topper-defined: () !default;
 
-$o-topper-is-silent: true !default;
-
+/// @access private
 $_o-topper-headshot-width: 100px;
 
+/// @access private
 $_o-topper-headshot-width-M: 150px;

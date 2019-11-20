@@ -35,14 +35,14 @@
 	// Output base styles required by all themes.
 	@if $include-base-styles {
 		.o-topper {
-			@include oTopperBase;
+			@include _oTopperBase;
 		}
 	}
 
 	// Output chosen elements, colours, and themes.
-	@include oTopperElements($elements);
-	@include oTopperColors($colors);
-	@include oTopperThemes($themes);
+	@include _oTopperElements($elements);
+	@include _oTopperColors($colors);
+	@include _oTopperThemes($themes);
 }
 
 @if ($o-topper-is-silent == false) {

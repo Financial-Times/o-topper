@@ -1,64 +1,72 @@
-@mixin oTopperThemeElements($themes) {
+@mixin _oTopperThemeElements($themes) {
 	@if index($themes, 'opinion') {
 		.o-topper__opinion-genre {
-			@include oTopperOpinionGenre;
+			@include _oTopperOpinionGenre;
 		}
 	}
 
 	.o-topper__headshot {
-		@include oTopperHeadshot;
+		@include _oTopperHeadshot;
 	}
 
 	.o-topper__headshot-image {
-		@include oTopperHeadshotImage;
+		@include _oTopperHeadshotImage;
 	}
 
 	.o-topper__anchor-link {
-		@include oTopperAnchorLink;
+		@include _oTopperAnchorLink;
 	}
 }
 
-@mixin oTopperThemes($themes) {
-	@include oTopperThemeElements($themes);
+@mixin _oTopperThemes($themes) {
+	@include _oTopperThemeElements($themes);
 
 	@if index($themes, 'basic') {
 		.o-topper--basic {
-			@include oTopperBasic;
-			&.o-topper--right-rail {
-				@include oTopperGridRightRail;
+			@include _oTopperBasic;
+			@if index($themes, 'right-rail') {
+				&.o-topper--right-rail {
+					@include _oTopperGridRightRail;
+				}
 			}
 		}
 	}
 
 	@if index($themes, 'branded') {
 		.o-topper--branded {
-			@include oTopperThemeBranded;
-			&.o-topper--right-rail {
-				@include oTopperGridRightRail;
+			@include _oTopperThemeBranded;
+			@if index($themes, 'right-rail') {
+				&.o-topper--right-rail {
+					@include _oTopperGridRightRail;
+				}
 			}
 		}
 	}
 
 	@if index($themes, 'opinion') {
 		.o-topper--opinion {
-			@include oTopperThemeOpinion;
-			&.o-topper--right-rail {
-				@include oTopperGridRightRail;
+			@include _oTopperThemeOpinion;
+			@if index($themes, 'right-rail') {
+				&.o-topper--right-rail {
+					@include _oTopperGridRightRail;
+				}
 			}
 		}
 	}
 
 	@if index($themes, 'has-headshot') {
 		.o-topper--has-headshot {
-			@include oTopperHasHeadshot;
+			@include _oTopperHasHeadshot;
 		}
 	}
 
 	@if index($themes, 'full-bleed-offset') {
 		.o-topper--full-bleed-offset {
-			@include oTopperThemeFullBleedOffset;
-			&.o-topper--right-rail {
-				@include oTopperFullBleedGridRightRail;
+			@include _oTopperThemeFullBleedOffset;
+			@if index($themes, 'right-rail') {
+				&.o-topper--right-rail {
+					@include _oTopperFullBleedGridRightRail;
+				}
 			}
 		}
 	}
@@ -66,156 +74,156 @@
 	@if index($themes, 'split-text-left') or index($themes, 'split-text-center') {
 		.o-topper--split-text-left,
 		.o-topper--split-text-center {
-			@include oTopperThemeSplitText;
+			@include _oTopperThemeSplitText;
 		}
 	}
 
 	@if index($themes, 'full-bleed-image-center') or index($themes, 'full-bleed-image-left') {
 		.o-topper--full-bleed-image-center,
 		.o-topper--full-bleed-image-left {
-			@include oTopperThemeFullBleedImage;
+			@include _oTopperThemeFullBleedImage;
 		}
 	}
 
 	@if index($themes, 'package') {
 		.o-topper--package {
-			@include oTopperThemePackage;
+			@include _oTopperThemePackage;
 		}
 	}
 
 	@if index($themes, 'package-extra') or index($themes, 'package-extra-wide') {
 		.o-topper--package-extra,
 		.o-topper--package-extra-wide {
-			@include oTopperThemePackageExtra;
+			@include _oTopperThemePackageExtra;
 		}
 	}
 
 	@if index($themes, 'package-special-report') {
 		.o-topper--package-special-report {
-			@include oTopperThemePackageSpecialReport;
+			@include _oTopperThemePackageSpecialReport;
 		}
 	}
 
 	@if index($themes, 'news-package') {
 		.o-topper--news-package {
-			@include oTopperThemeNewsPackage;
+			@include _oTopperThemeNewsPackage;
 		}
 	}
 
 	@if index($themes, 'centered') {
 		.o-topper--centered {
-			@include oTopperCentered;
+			@include _oTopperCentered;
 		}
 	}
 }
 
-@mixin oTopperElements($elements) {
+@mixin _oTopperElements($elements) {
 	@if index($elements, 'content') {
 		.o-topper__content {
-			@include oTopperContent;
+			@include _oTopperContent;
 		}
 	}
 
 	@if index($elements, 'visual') {
 		.o-topper__visual {
-			@include oTopperVisual;
+			@include _oTopperVisual;
 		}
 	}
 
 	@if index($elements, 'visual') or index($elements, 'background') {
 		.o-topper__visual,
 		.o-topper__background {
-			@include oTopperBackground;
+			@include _oTopperBackground;
 		}
 	}
 
 	@if index($elements, 'headline') {
 		.o-topper__headline {
-			@include oTopperHeadline;
+			@include _oTopperHeadline;
 		}
 
 		.o-topper__headline--large {
-			@include oTopperHeadlineLarge;
+			@include _oTopperHeadlineLarge;
 		}
 	}
 
 	@if index($elements, 'summary') {
 		.o-topper__summary {
-			@include oTopperSummary;
+			@include _oTopperSummary;
 		}
 	}
 
 	@if index($elements, 'standfirst') {
 		.o-topper__standfirst {
-			@include oTopperStandfirst;
+			@include _oTopperStandfirst;
 		}
 	}
 
 	@if index($elements, 'summary--body') {
 		.o-topper__summary--body {
-			@include oTopperSummaryBody;
+			@include _oTopperSummaryBody;
 		}
 	}
 
 	@if index($elements, 'tags') {
 		.o-topper__tags {
-			@include oTopperTags;
+			@include _oTopperTags;
 		}
 	}
 
 	@if index($elements, 'columnist') {
 		.o-topper__columnist {
-			@include oTopperColumnist;
+			@include _oTopperColumnist;
 		}
 	}
 
 	@if index($elements, 'columnist-name') {
 		.o-topper__columnist-name {
-			@include oTopperColumnistName;
+			@include _oTopperColumnistName;
 		}
 	}
 
 	@if index($elements, 'brand') {
 		.o-topper__brand {
-			@include oTopperBrand;
+			@include _oTopperBrand;
 		}
 	}
 
 	@if index($elements, 'topic') {
 		.o-topper__topic {
-			@include oTopperTopic;
+			@include _oTopperTopic;
 		}
 	}
 
 	@if index($elements, 'read-next') {
 		.o-topper__read-next {
-			@include oTopperReadNext;
+			@include _oTopperReadNext;
 		}
 	}
 
 	@if index($elements, 'image') {
 		.o-topper__image {
-			@include oTopperImage;
+			@include _oTopperImage;
 		}
 	}
 
 	@if index($elements, 'image-credit') {
 		.o-topper__image-credit {
-			@include oTopperImageCredit;
+			@include _oTopperImageCredit;
 		}
 	}
 }
 
-@mixin oTopperColors($colors) {
+@mixin _oTopperColors($colors) {
 	@each $color in $colors {
 		.o-topper--color-#{$color} {
-			@include oTopperColor($color);
+			@include _oTopperColor($color);
 		}
 	}
 }
 
 // uses topper background colour to set background and pick contrasting text color
-@mixin oTopperColor($color-name) {
+@mixin _oTopperColor($color-name) {
 	$background: oColorsGetPaletteColor($color-name);
 	$foreground: oColorsGetTextColor($background, $opacity: 100);
 	$is-light: $foreground == 'white';

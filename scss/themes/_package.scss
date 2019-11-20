@@ -1,4 +1,4 @@
-@mixin oTopperAnchorLink {
+@mixin _oTopperAnchorLink {
 	@include oTypographySans(0, $progressive: true);
 	display: inline-block;
 	width: 110px;
@@ -25,7 +25,7 @@
 	}
 }
 
-@mixin oTopperThemePackage {
+@mixin _oTopperThemePackage {
 	margin-bottom: oSpacingByIncrement(10);
 
 	%_o-topper__tag,
@@ -41,7 +41,7 @@
 	}
 }
 
-@mixin oTopperThemePackageExtra {
+@mixin _oTopperThemePackageExtra {
 	.o-topper__package-sequence-id,
 	&.o-topper--package .o-topper__headline {
 		color: oColorsGetPaletteColor('lemon');
@@ -61,7 +61,7 @@
 	}
 }
 
-@mixin oTopperThemePackageSpecialReport {
+@mixin _oTopperThemePackageSpecialReport {
 	.o-topper__tag {
 		opacity: 0.6;
 	}
