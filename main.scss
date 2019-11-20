@@ -21,7 +21,7 @@
 
 @mixin oTopper($opts: (
 	'themes': $_o-topper-themes,
-	'elements': $_o-topper-elements
+	'elements': $_o-topper-elements,
 	'colors': $_o-topper-colors
 ), $include-base-styles: true) {
 
@@ -31,6 +31,9 @@
 	// Get topper elements to include.
 	$elements: map-get($opts, 'elements');
 	$elements: if($elements, $elements, ());
+	// Get topper colors to include.
+	$colors: map-get($opts, 'colors');
+	$colors: if($colors, $colors, ());
 
 	// Output base styles required by all themes.
 	@if $include-base-styles {
