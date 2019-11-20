@@ -4,20 +4,20 @@
 @import 'o-grid/main';
 @import 'o-icons/main';
 
-@import 'scss/variables';
-@import 'scss/mixins';
-@import 'scss/grid';
-@import 'scss/elements';
-@import 'scss/layout';
+@import 'src/scss/variables';
+@import 'src/scss/mixins';
+@import 'src/scss/grid';
+@import 'src/scss/elements';
+@import 'src/scss/layout';
 
-@import 'scss/themes/branded';
-@import 'scss/themes/full-bleed-offset';
-@import 'scss/themes/split-text';
-@import 'scss/themes/full-bleed-image';
-@import 'scss/themes/package';
-@import 'scss/themes/news-package';
-@import 'scss/themes/right-rail';
-@import 'scss/themes/centered';
+@import 'src/scss/themes/branded';
+@import 'src/scss/themes/full-bleed-offset';
+@import 'src/scss/themes/split-text';
+@import 'src/scss/themes/full-bleed-image';
+@import 'src/scss/themes/package';
+@import 'src/scss/themes/news-package';
+@import 'src/scss/themes/right-rail';
+@import 'src/scss/themes/centered';
 
 @mixin oTopper($opts: (
 	'themes': $_o-topper-themes,
