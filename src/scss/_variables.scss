@@ -2,7 +2,8 @@
 /// @access public
 $o-topper-is-silent: true !default;
 
-/// @prop {List} - colors available to editorial in methode for the background
+/// When adding a new colour update the README
+/// @prop {List} - colours available to editorial in methode for the background
 /// @access private
 $_o-topper-colors: (
 	'white',
@@ -17,6 +18,7 @@ $_o-topper-colors: (
 	'velvet'
 );
 
+/// When adding a new theme update the README
 /// @prop {List} - theme options
 /// @access private
 $_o-topper-themes: (
@@ -37,6 +39,7 @@ $_o-topper-themes: (
 	'centered',
 );
 
+/// When adding a new element update the README
 /// @prop {List} - element options
 /// @access private
 $_o-topper-elements: (
