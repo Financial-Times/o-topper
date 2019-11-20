@@ -1,11 +1,11 @@
 @mixin _oTopperAnchorLink {
-	@include oTypographySans(0, $progressive: true);
+	@include oTypographySans(0);
 	display: inline-block;
 	width: 110px;
 	padding: 5px 0 0 10px;
 	margin-top: oSpacingByName('s8');
-	border-top: 1px solid oColorsGetColorFor('link', 'text');
-	border-left: 1px solid oColorsGetColorFor('link', 'text');
+	border-top: 1px solid oColorsByUsecase('link', 'text');
+	border-left: 1px solid oColorsByUsecase('link', 'text');
 	border-bottom-width: 0;
 	white-space: nowrap;
 	overflow: visible;
@@ -15,7 +15,7 @@
 	}
 
 	&:after {
-		@include oIconsGetIcon('arrow-down', oColorsGetColorFor('link', 'text'), 20, $iconset-version: 1);
+		@include oIconsContent('arrow-down', oColorsByUsecase('link', 'text'), $size: 20);
 		content: '';
 		display: block;
 		position: relative;
@@ -44,19 +44,19 @@
 @mixin _oTopperThemePackageExtra {
 	.o-topper__package-sequence-id,
 	&.o-topper--package .o-topper__headline {
-		color: oColorsGetPaletteColor('lemon');
+		color: oColorsByName('lemon');
 	}
 
 	.o-topper__anchor-link {
-		color: oColorsGetPaletteColor('lemon');
-		border-color: oColorsGetPaletteColor('lemon');
+		color: oColorsByName('lemon');
+		border-color: oColorsByName('lemon');
 
 		&:after {
-			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('lemon'), 20, null, false, false);
+			@include oIconsContent('arrow-down', oColorsByName('lemon'), $size: null, $include-base-styles: false);
 		}
 
 		&:hover {
-			color: darken(oColorsGetPaletteColor('lemon'), 20%);
+			color: darken(oColorsByName('lemon'), 20%);
 		}
 	}
 }
@@ -67,15 +67,15 @@
 	}
 
 	.o-topper__anchor-link {
-		border-color: oColorsGetPaletteColor('white');
-		color: oColorsGetPaletteColor('white');
+		border-color: oColorsByName('white');
+		color: oColorsByName('white');
 
 		&:after {
-			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('white'), 20, null, false, false);
+			@include oIconsContent('arrow-down', oColorsByName('lemon'), $size: null, $include-base-styles: false);
 		}
 
 		&:hover {
-			color: darken(oColorsGetPaletteColor('white'), 20%);
+			color: darken(oColorsByName('white'), 20%);
 		}
 	}
 }

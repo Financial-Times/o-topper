@@ -3,5 +3,5 @@
 @include oTopper();
 
 body {
-	@include oColorsFor(page, background);
+	background: oColorsByUsecase('page', 'background');
 }

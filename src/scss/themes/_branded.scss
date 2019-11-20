@@ -42,14 +42,14 @@
 @mixin _oTopperThemeOpinion {
 	.o-topper__topic,
 	.o-topper__opinion-genre {
-		@include oTypographySize($scale: 2, $line-height: 28px);
+		@include oTypographySans($scale: 2, $line-height: 28px, $include-font-family: false);
 	}
 }
 
 @mixin _oTopperOpinionGenre {
 	@extend %_o-topper__tag;
 	font-weight: normal;
-	color: oColorsGetPaletteColor('oxford');
+	color: oColorsByName('oxford');
 }
 
 @mixin _oTopperHeadshot {

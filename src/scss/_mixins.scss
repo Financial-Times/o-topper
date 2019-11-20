@@ -139,11 +139,14 @@
 
 	@if index($elements, 'headline') {
 		.o-topper__headline {
-			@include _oTopperHeadline;
+			@include oEditorialTypographyHeading($level: 1);
+			margin-bottom: oSpacingByIncrement(5);
 		}
 
 		.o-topper__headline--large {
-			@include _oTopperHeadlineLarge;
+			@include oEditorialTypographyHeadline();
+			position: relative; //so it appears above the full width background
+			margin-bottom: oSpacingByIncrement(7);
 		}
 	}
 
@@ -224,7 +227,7 @@
 
 // uses topper background colour to set background and pick contrasting text color
 @mixin _oTopperColor($color-name) {
-	$background: oColorsGetPaletteColor($color-name);
+	$background: oColorsByName($color-name);
 	$foreground: oColorsGetTextColor($background, $opacity: 100);
 	$is-light: $foreground == 'white';
 	$hover-color: lighten($foreground, 40%);
@@ -289,10 +292,10 @@
 		.o-topper__opinion-genre,
 		.o-topper__topic,
 		.o-topper__columnist-name {
-			@include oColorsFor('tag-link', text);
+			color: oColorsByUsecase('tag-link', 'text');
 
 			&:hover {
-				@include oColorsFor('tag-link-hover', text);
+				color: oColorsByUsecase('tag-link-hover', 'text');
 			}
 		}
 	}
@@ -301,10 +304,10 @@
 		.o-topper__tags,
 		.o-topper__topic,
 		.o-topper__columnist-name {
-			color: oColorsGetPaletteColor('oxford');
+			color: oColorsByName('oxford');
 
 			&:hover {
-				color: oColorsGetPaletteColor('black-80');
+				color: oColorsByName('black-80');
 			}
 		}
 	}
