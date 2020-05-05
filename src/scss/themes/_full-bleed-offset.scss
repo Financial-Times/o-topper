@@ -1,30 +1,10 @@
 // sass-lint:disable mixins-before-declarations
 
 @mixin _oTopperThemeFullBleedOffset {
-	display: flex;
-	flex-direction: column;
 
 	@include oGridRespondTo($until: L) {
 		margin: 0 auto;
 		padding: 0;
-	}
-
-	.o-topper__read-next {
-		display: none;
-	}
-
-	.o-topper__content {
-		padding: 20px 10px;
-		order: 2;
-
-		@include oGridRespondTo(M) {
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-	}
-
-	&.o-topper--color-paper .o-topper__content {
-		padding-bottom: 0;
 	}
 
 	@include oGridRespondTo(M) {
@@ -69,16 +49,36 @@
 	@include oGridRespondTo(XL) {
 		grid-template-columns: 40px 40px 20px minmax(500px, 700px) 40px minmax(0, auto) 300px;
 	}
+	display: flex;
+	flex-direction: column;
+
+	.o-topper__read-next {
+		display: none;
+	}
+
+	.o-topper__content {
+
+		@include oGridRespondTo(M) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		padding: 20px 10px;
+		order: 2;
+	}
+
+	&.o-topper--color-paper .o-topper__content {
+		padding-bottom: 0;
+	}
 
 	@supports (object-fit: cover) {
 		.o-topper__visual {
-			height: auto;
-			max-height: 480px;
 
 			@include oGridRespondTo(L) {
 				height: 600px;
 				max-height: 600px;
 			}
+			height: auto;
+			max-height: 480px;
 		}
 	}
 
