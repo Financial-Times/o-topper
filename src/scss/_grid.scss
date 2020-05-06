@@ -1,5 +1,7 @@
 @mixin _oTopperArticleGrid() {
 	@include oGridContainer();
+	display: flex;
+	flex-direction: column;
 
 	@include oGridRespondTo(L) {
 		display: grid;
@@ -20,8 +22,6 @@
 	@include oGridRespondTo(XL) {
 		grid-template-columns: 40px 80px minmax(600px, 700px) minmax(20px, 1fr) 300px;
 	}
-	display: flex;
-	flex-direction: column;
 }
 
 @mixin _oTopperArticleGridCentered() {

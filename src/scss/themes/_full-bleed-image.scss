@@ -2,6 +2,16 @@
 
 @mixin _oTopperThemeFullBleedImage {
 
+	.o-topper__read-next {
+		display: none;
+	}
+
+	&.o-topper--full-bleed-image-center {
+		@include oGridRespondTo(S) {
+			@include _oTopperAlignText(center);
+		}
+	}
+
 	@include oGridRespondTo($until: M) {
 		.o-topper__content {
 			display: flex;
@@ -35,25 +45,16 @@
 			grid-row: 1;
 		}
 	}
-	.o-topper__read-next {
-		display: none;
-	}
-
-	&.o-topper--full-bleed-image-center {
-		@include oGridRespondTo(S) {
-			@include _oTopperAlignText(center);
-		}
-	}
 
 	@supports (object-fit: cover) {
 		.o-topper__visual {
+			height: auto;
+			max-height: 480px;
 
 			@include oGridRespondTo(L) {
 				height: 600px;
 				max-height: 600px;
 			}
-			height: auto;
-			max-height: 480px;
 		}
 	}
 }

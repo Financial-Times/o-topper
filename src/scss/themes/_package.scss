@@ -1,9 +1,5 @@
 @mixin _oTopperAnchorLink {
 	@include oTypographySans(0);
-
-	@include oGridRespondTo(S) {
-		width: 140px;
-	}
 	display: inline-block;
 	width: 110px;
 	padding: 5px 0 0 10px;
@@ -13,6 +9,10 @@
 	border-bottom-width: 0;
 	white-space: nowrap;
 	overflow: visible;
+
+	@include oGridRespondTo(S) {
+		width: 140px;
+	}
 
 	&:after {
 		@include oIconsContent('arrow-down', oColorsByUsecase('link', 'text'), $size: 20);

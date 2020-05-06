@@ -1,11 +1,11 @@
 @mixin _oTopperBase {
 	//Basic topper uses the same grid columns as an article, so things can line up.
 	@include _oTopperArticleGrid();
+	margin-bottom: oSpacingByIncrement(5);
 
 	@include oGridRespondTo(L) {
 		grid-template-rows: 20px min-content 60px min-content 20px;
 	}
-	margin-bottom: oSpacingByIncrement(5);
 }
 
 @mixin _oTopperCentered {
@@ -47,11 +47,11 @@
 }
 
 @mixin _oTopperReadNext {
+	display: none;
 
 	@include oGridRespondTo(L) {
 		display: block;
 	}
-	display: none;
 
 	position: relative;
 	grid-row: 2 / span 4;
