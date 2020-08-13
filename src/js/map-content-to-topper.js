@@ -77,7 +77,7 @@ const getTopperSettings = content => {
 		};
 
 		//otherwise use the editorially selected topper if it exists
-	} else if(content.topper && content.topper.layout && themeImageRatio.hasOwnProperty(content.topper.layout)) {
+	} else if(content.topper && content.topper.layout && Object.prototype.hasOwnProperty.call(themeImageRatio, content.topper.layout)) {
 		const hasImage = content.topper.layout !== 'full-bleed-text';
 		let backgroundColour;
 
@@ -101,7 +101,7 @@ const getTopperSettings = content => {
 		};
 
 		//Branded regular toppers
-	} else if(content.brandConcept || (content.topper && content.topper.isBranded) || (content.genreConcept && content.genreConcept.id === '6da31a37-691f-4908-896f-2829ebe2309e')) {
+	} else if(content.brandConcept || content.topper && content.topper.isBranded || content.genreConcept && content.genreConcept.id === '6da31a37-691f-4908-896f-2829ebe2309e') {
 		let fthead = Array.isArray(content.authorConcepts) &&
 			content.authorConcepts.reduce(
 				(attrs, {attributes} = {}) => attrs.concat(attributes),
@@ -159,7 +159,7 @@ const hasDarkBackground = (backgroundColour) => {
 		'claret',
 		'crimson'
 	];
-	return (darkBackgrounds.indexOf(backgroundColour) > -1);
+	return darkBackgrounds.indexOf(backgroundColour) > -1;
 };
 
 export default content => {
