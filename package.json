@@ -2,7 +2,7 @@
   "private": true,
   "name": "o-topper",
   "dependencies": {
-    "@financial-times/n-map-content-to-topper": "^1.0.0"
+    "@financial-times/n-map-content-to-topper": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^7.8.1",
