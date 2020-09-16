@@ -43,11 +43,12 @@
 
 @mixin _oTopperImageCredit {
 	@include oTypographySans(-2);
-	color: oColorsByName('white');
-	position: absolute;
-	right: 12px;
-	bottom: 2px;
-	text-shadow: 1px 1px 1px oColorsByName('slate');
+	color: oColorsByName('black-60');
+	position: relative;
+	clear: both;
+	float: right;
+	margin-top: oSpacingByName('s1');
+	margin-right: oSpacingByName('s3');
 }
 
 //IE9 support
