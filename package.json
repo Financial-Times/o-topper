@@ -1,9 +1,6 @@
 {
   "private": true,
   "name": "o-topper",
-  "dependencies": {
-    "@financial-times/n-map-content-to-topper": "^1.1.0"
-  },
   "devDependencies": {
     "eslint": "^7.8.1",
     "eslint-config-origami-component": "^2.1.0",
