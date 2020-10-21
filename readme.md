@@ -153,7 +153,7 @@ This component exports a JavaScript helper from [`n-map-content-to-topper`](http
 **Note:** This helper is deeply tied to the FT.com content store, and includes hardcoded UUIDs and business logic.
 
 ```js
-import { mapContentToTopper } from 'o-topper';
+import { mapContentToTopper } from '@financial-times/o-topper';
 
 const topper = mapContentToTopper(ftArticle, flags);
 ```
