@@ -8,13 +8,13 @@
     },
     "main": "main.js",
     "peerDependencies": {
-        "@financial-times/n-map-content-to-topper": "^1.1.0",
-        "@financial-times/o-colors": "^5.0.0",
-        "@financial-times/o-editorial-typography": "^1.0.0",
-        "@financial-times/o-grid": "^5.0.0",
-        "@financial-times/o-icons": "^6.0.0",
-        "@financial-times/o-spacing": "^2.0.0",
-        "@financial-times/o-typography": "^6.0.0"
+        "@financial-times/n-map-content-to-topper": "^100.0.0-3",
+        "@financial-times/o-colors": "^100.0.0-3",
+        "@financial-times/o-editorial-typography": "^100.0.0-3",
+        "@financial-times/o-grid": "^100.0.0-3",
+        "@financial-times/o-icons": "^100.0.0-3",
+        "@financial-times/o-spacing": "^100.0.0-3",
+        "@financial-times/o-typography": "^100.0.0-3"
     },
     "description": "Article header styling",
     "publishConfig": {
