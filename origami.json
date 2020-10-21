@@ -1,7 +1,7 @@
 {
 	"description": "Article header styling",
 	"origamiType": "module",
-	"origamiVersion": 1,
+	"origamiVersion": 2,
 	"keywords": "topper, header",
 	"origamiCategory": "components",
 	"support": "https://github.com/Financial-Times/o-topper/issues",
