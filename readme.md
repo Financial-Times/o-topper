@@ -86,7 +86,7 @@ These colors affect the background of the `.o-topper__background` and `.o-topper
 To include all o-topper CSS include `oTopper`:
 
 ```scss
-@import 'o-topper/main';
+@import '@financial-times/o-topper/main';
 @include oTopper();
 ```
 
