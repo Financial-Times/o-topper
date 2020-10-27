@@ -1,12 +1,14 @@
 {
     "name": "@financial-times/o-topper",
+    "version": "100.0.0-7",
+    "description": "Article header styling",
+    "browser": "main.js",
     "devDependencies": {
         "eslint": "^7.8.1",
         "eslint-config-origami-component": "^2.1.0",
         "origami-ci-tools": "^2.0.2",
         "stylelint-config-origami-component": "^1.0.4"
     },
-    "browser": "main.js",
     "peerDependencies": {
         "@financial-times/n-map-content-to-topper": "^100.0.0-7",
         "@financial-times/o-colors": "^100.0.0-7",
@@ -16,9 +18,7 @@
         "@financial-times/o-spacing": "^100.0.0-7",
         "@financial-times/o-typography": "^100.0.0-7"
     },
-    "description": "Article header styling",
     "publishConfig": {
         "registry": "http://localhost:4873"
-    },
-    "version": "100.0.0-7"
+    }
 }
