@@ -71,6 +71,11 @@
 			&:hover {
 				color: unset;
 			}
+			&:focus,
+			&:hover,
+			&:visited {
+				outline-color: currentColor;
+			}
 		}
 	}
 }
