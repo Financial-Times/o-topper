@@ -1,5 +1,11 @@
 # o-topper
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 This component is used for styling the topper sections of an article.
 
 - [Markup](#markup)
