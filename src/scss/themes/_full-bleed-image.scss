@@ -9,15 +9,12 @@
 	}
 
 	@include oGridRespondTo($until: M) {
+		padding: 0;
 		.o-topper__content {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			padding: 20px;
-			min-height: 350px;
-		}
-
-		.o-topper__visual {
 			min-height: 350px;
 		}
 	}

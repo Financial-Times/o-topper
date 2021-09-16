@@ -258,33 +258,34 @@
 @mixin _oTopperColor($color-name) {
 	$background: oColorsByName($color-name);
 	$foreground: oColorsGetTextColor($background, $opacity: 100);
-	$is-light: $foreground == 'white';
-	$hover-color: lighten($foreground, 40%);
-
-	@if $is-light {
-		$hover-color: darken($foreground, 20%);
-	}
+	$link-text-color: oColorsByUsecase('link', 'text');
+	$link-contrasts-with-background: oColorsGetContrastRatio($background, $link-text-color) > 4.5;
 
 	// include oTopperColor on a parent then extend this placeholder on a
 	// descendent to lend that descendent the color you specified in the mixin
 	.o-topper__background,
 	.o-topper__content {
-		@if $color-name == 'wheat' {
-			background-color: oColorsMix($color: 'wheat', $percentage: 40);
-		} @else {
-			background-color: $background;
-		}
+		background-color: $background;
 	}
 
-	@if not $is-light {
-		.o-topper__standfirst {
+
+	.o-topper__standfirst,
+	.o-topper__summary {
+		@if $link-contrasts-with-background {
 			a {
+				@include oTypographyLink();
+			}
+		} @else {
+			a {
+				$hover-color: darken($foreground, 20%);
 				color: $foreground;
 				border-bottom-color: $foreground;
+				text-decoration-color: $foreground;
 
 				&:hover {
 					color: $hover-color;
 					border-bottom-color: $hover-color;
+					text-decoration-color: $hover-color;
 				}
 			}
 		}

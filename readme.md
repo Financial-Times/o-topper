@@ -1,5 +1,11 @@
 # o-topper [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](#licence)
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 This component is used for styling the topper sections of an article.
 
 - [Usage](#usage)
@@ -83,7 +89,6 @@ These colors affect the background of the `.o-topper__background` and `.o-topper
 .o-topper--color-slate
 .o-topper--color-crimson
 .o-topper--color-sky
-.o-topper--color-velvet
 ```
 
 ## Sass
@@ -91,7 +96,7 @@ These colors affect the background of the `.o-topper__background` and `.o-topper
 To include all o-topper CSS include `oTopper`:
 
 ```scss
-@import 'o-topper/main';
+@import '@financial-times/o-topper/main';
 @include oTopper();
 ```
 
@@ -131,7 +136,7 @@ To include o-topper styles granularly specify which elements, themes, and colour
 		'topic',
 		'read-next',
 		'image',
-		'image-credit'
+		'image-credit',
 	),
 	'colors': (
 		'white', // .o-topper--color-white
@@ -143,7 +148,6 @@ To include o-topper styles granularly specify which elements, themes, and colour
 		'wheat',
 		'crimson',
 		'sky',
-		'velvet'
 	)
 ));
 ```
@@ -159,7 +163,7 @@ This component exports a JavaScript helper from [`n-map-content-to-topper`](http
 **Note:** This helper is deeply tied to the FT.com content store, and includes hardcoded UUIDs and business logic.
 
 ```js
-import { mapContentToTopper } from 'o-topper';
+import { mapContentToTopper } from '@financial-times/o-topper';
 
 const topper = mapContentToTopper(ftArticle, flags);
 ```
@@ -168,8 +172,10 @@ const topper = mapContentToTopper(ftArticle, flags);
 
 State | Major Version | Last Minor Release | Migration guide |
 :---: | :---: | :---: | :---:
-✨ active | 3 | N/A  | [migrate to v3](MIGRATION.md#migrating-from-v2-to-v3) |
-⚠ maintained | 2 | 2.7  | [migrate to v2](MIGRATION.md#migrating-from-v1-to-v2) |
+✨ active | 5 | N/A  | [migrate to v5](MIGRATION.md#migrating-from-v4-to-v5) |
+⚠ maintained | 4 | 4.0  | [migrate to v4](MIGRATION.md#migrating-from-v3-to-v4) |
+⚠ maintained | 3 | 3.1  | [migrate to v3](MIGRATION.md#migrating-from-v2-to-v3) |
+╳ deprecated | 2 | 2.7  | [migrate to v2](MIGRATION.md#migrating-from-v1-to-v2) |
 ╳ deprecated | 1 | 1.2  | - |
 
 ## Contact
